@@ -229,7 +229,7 @@ In this exercise, you will create a workflow that runs tests every time code is 
     - Go to your GitHub repository and click on the "Actions" tab.
     - You should see the "Run Tests" workflow running. Click on it to see the details.
     - Verify that the workflow ran successfully and executed the tests.
-
+```
 
 By the end of this part, you should have a solid understanding of how to create and run basic GitHub Actions workflows. These workflows automate tasks such as printing messages and running tests on your code, which are essential steps in any CI/CD pipeline.
-
+```
