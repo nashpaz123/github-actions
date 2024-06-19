@@ -1,7 +1,5 @@
-Certainly! Here is Part 3 of the GitHub Actions course in complete markdown format:
-
 ```markdown
-# GitHub Actions Course
+# GitHub Actions 
 
 ## Part 3: Advanced Workflow Features (45 minutes)
 
