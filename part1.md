@@ -63,3 +63,19 @@ jobs:
 
     - name: Run tests
       run: npm test
+```
+
+Let’s break down this example:
+
+name: The name of the workflow, which is displayed in the GitHub Actions tab.
+on: Specifies the events that trigger the workflow. In this case, the workflow is triggered by push and pull_request events.
+jobs: Defines the jobs that make up the workflow. In this example, there is a single job named build.
+runs-on: Specifies the type of runner to use. GitHub provides runners for various operating systems. Here, ubuntu-latest is used.
+steps: Lists the steps to run as part of the job. Each step can use an action or run a command directly.
+name: Checkout code: This step uses the actions/checkout action to check out the repository’s code.
+name: Set up Node.js: This step uses the actions/setup-node action to set up a Node.js environment.
+name: Install dependencies: This step runs the command npm install to install the project dependencies.
+name: Run tests: This step runs the command npm test to execute the tests.
+This workflow runs every time code is pushed to the repository or a pull request is opened. It checks out the code, sets up Node.js, installs dependencies, and runs tests, ensuring that the code changes meet the required standards before being merged.
+
+With this understanding of CI/CD and GitHub Actions, you are now ready to create your first workflow in the next part of this course.
