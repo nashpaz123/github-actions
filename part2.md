@@ -1,7 +1,5 @@
-Got it! Here is Part 2 of the GitHub Actions course in complete markdown format:
-
 ```markdown
-# GitHub Actions Course
+# GitHub Actions 
 
 ## Part 2: Setting Up and Running Your First Workflow (45 minutes)
 
