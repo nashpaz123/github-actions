@@ -1,4 +1,4 @@
-# GitHub Actions Course
+# GitHub Actions 
 
 ## Part 1: Introduction to GitHub Actions (30 minutes)
 
