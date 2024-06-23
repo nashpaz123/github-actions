@@ -35,7 +35,7 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Print secret
       run: echo ${{ secrets.MY_SECRET }}
@@ -59,6 +59,11 @@ In this exercise, you will create a workflow that uses a secret and an environme
     - Access the Secrets section under "Actions".
     - Add a new secret named `MY_SECRET` with a value of your choice.
 
+1. **Add a secret to your repository**:
+    - Navigate to the Settings tab of your repository.
+    - Access the Secrets section under "Actions".
+    - Add a new secret named `MY_SECRET` with a value of your choice.
+
 2. **Create the workflow file**:
     - In the `.github/workflows` directory, create a new file named `use-secrets.yml`.
 
@@ -73,18 +78,21 @@ In this exercise, you will create a workflow that uses a secret and an environme
     jobs:
       use_secrets_job:
         runs-on: ubuntu-latest
+        environment: env1
 
         steps:
         - name: Checkout code
-          uses: actions/checkout@v2
+          uses: actions/checkout@v4
 
         - name: Print secret
           run: echo ${{ secrets.MY_SECRET }}
 
-        - name: Print environment variable
+        - name: Create then print environment variable
           env:
             MY_ENV_VAR: 'Hello, Environment!'
-          run: echo $MY_ENV_VAR
+          run: |
+            echo $MY_ENV_VAR
+
     ```
 
 4. **Commit and push your changes to the repository**:
@@ -117,14 +125,14 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
-        node: [12, 14, 16]
+        node: [16, 18, 20]
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Set up Node.js
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node }}
 
@@ -169,14 +177,14 @@ In this exercise, you will create a workflow that uses matrix builds to run test
         strategy:
           matrix:
             os: [ubuntu-latest, windows-latest, macos-latest]
-            node: [12, 14, 16]
+            node: [16, 18, 20]
 
         steps:
         - name: Checkout code
-          uses: actions/checkout@v2
+          uses: actions/checkout@v4
 
         - name: Set up Node.js
-          uses: actions/setup-node@v2
+          uses: actions/setup-node@v4
           with:
             node-version: ${{ matrix.node }}
 
