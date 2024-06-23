@@ -144,12 +144,12 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Set up Node.js
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v4
       with:
-        node-version: '14'
+        node-version: '20'
 
     - name: Install dependencies
       run: npm install
@@ -196,12 +196,12 @@ In this exercise, you will create a workflow that runs tests every time code is 
 
         steps:
         - name: Checkout code
-          uses: actions/checkout@v2
+          uses: actions/checkout@v4
 
         - name: Set up Node.js
-          uses: actions/setup-node@v2
+          uses: actions/setup-node@v4
           with:
-            node-version: '14'
+            node-version: '20'
 
         - name: Install dependencies
           run: npm install
