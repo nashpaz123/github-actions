@@ -9,6 +9,7 @@
 YAML (YAML Ain't Markup Language) is a human-readable data serialization standard commonly used for configuration files. YAML uses indentation to represent the structure of data, making it easy to read and write. Here are some basic concepts to understand:
 
 - **Key-Value Pairs**: Data in YAML is represented as key-value pairs, separated by a colon and space.
+
   ```yaml
   name: John Doe
   age: 30
