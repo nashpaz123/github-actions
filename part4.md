@@ -66,7 +66,7 @@ JavaScript actions are defined by a JavaScript file and an action metadata file.
 5. In your repository, create a new workflow file `custom-action.yml` in the .github/workflows directory.
 
     ```yaml
-name: Custom js action
+nname: Custom js action
 
 on: [push]
 
@@ -77,6 +77,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: if you dont install the module youll get an err
+        run: npm i @actions/core
 
       - name: Run my custom action
         uses: ./my-js-action
@@ -113,7 +116,7 @@ Docker-based actions use a Docker container to run the action's logic, which can
    - Inside the `my-docker-action` directory, create a file named `Dockerfile` with the following content:
 
      ```dockerfile
-     FROM node:12-slim
+     FROM node:20-slim
 
      COPY entrypoint.sh /entrypoint.sh
      RUN chmod +x /entrypoint.sh
@@ -168,7 +171,7 @@ In this exercise, you will create a custom Docker-based action and use it in a w
    - Inside the `my-docker-action` directory, create a file named `Dockerfile` with the following content:
 
      ```dockerfile
-     FROM node:12-slim
+     FROM node:20-slim
 
      COPY entrypoint.sh /entrypoint.sh
      RUN chmod +x /entrypoint.sh
@@ -192,10 +195,10 @@ In this exercise, you will create a custom Docker-based action and use it in a w
 ### Part B: Using the Custom Action in a Workflow
 
 1. **Create a workflow file**:
-   - In the `.github/workflows` directory, create a new file named `custom-action.yml`.
+   - In the `.github/workflows` directory, create a new file named `custom-action-docker.yml`.
 
 2. **Add workflow content**:
-   - Add the following content to `custom-action.yml`:
+   - Add the following content to `custom-action-docker.yml`:
 
      ```yaml
      name: Custom Action Docker

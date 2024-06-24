@@ -1,0 +1,16 @@
+     name: Custom Action Docker
+
+     on: [push]
+
+     jobs:
+       custom_action_job:
+         runs-on: ubuntu-latest
+
+         steps:
+         - name: Checkout code
+           uses: actions/checkout@v4
+
+         - name: Run custom action
+           uses: ./.github/actions/my-docker-action
+           with:
+             name: 'World'
