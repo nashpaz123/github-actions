@@ -63,6 +63,28 @@ JavaScript actions are defined by a JavaScript file and an action metadata file.
 4. **Publish your action**:
    - Commit and push your changes to your repository. You can now use your custom action in workflows.
 
+5. In your repository, create a new workflow file `custom-action.yml` in the .github/workflows directory.
+
+    ```yaml
+name: Custom js action
+
+on: [push]
+
+jobs:
+  my_job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run my custom action
+        uses: ./my-js-action
+        with:
+          name: 'myname'
+```
+
+
 #### Writing Docker-based Actions
 
 Docker-based actions use a Docker container to run the action's logic, which can include any tools or dependencies installed in the container.
@@ -176,7 +198,7 @@ In this exercise, you will create a custom Docker-based action and use it in a w
    - Add the following content to `custom-action.yml`:
 
      ```yaml
-     name: Custom Action
+     name: Custom Action Docker
 
      on: [push]
 
@@ -186,7 +208,7 @@ In this exercise, you will create a custom Docker-based action and use it in a w
 
          steps:
          - name: Checkout code
-           uses: actions/checkout@v2
+           uses: actions/checkout@v4
 
          - name: Run custom action
            uses: ./.github/actions/my-docker-action

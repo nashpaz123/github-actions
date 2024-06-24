@@ -1,0 +1,16 @@
+name: Custom js action
+
+on: [push]
+
+jobs:
+  my_job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run my custom action
+        uses: ./my-js-action
+        with:
+          my-input: 'world'
