@@ -24,7 +24,7 @@ JavaScript actions are defined by a JavaScript file and an action metadata file.
          description: 'The name to greet'
          required: true
      runs:
-       using: 'node12'
+       using: 'node20'
        main: 'index.js'
      ```
 
