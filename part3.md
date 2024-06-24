@@ -1,4 +1,3 @@
-```markdown
 # GitHub Actions 
 
 ## Part 3: Advanced Workflow Features (45 minutes)
@@ -213,6 +212,6 @@ In this exercise, you will create a workflow that uses matrix builds to run test
     - Go to your GitHub repository and click on the "Actions" tab.
     - You should see the "Matrix Build" workflow running. Click on it to see the details.
     - Verify that the workflow ran successfully and executed the tests on all specified environments.
-```
+
 
 By the end of this part, you should have a solid understanding of how to use advanced features of GitHub Actions, such as secrets, environment variables, and matrix builds. These features allow you to create more secure and flexible workflows that can handle various environments and configurations.
