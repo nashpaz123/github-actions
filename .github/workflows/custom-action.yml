@@ -10,6 +10,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: if you dont install the module youll get an err
+        run: npm i @actions/core
+
       - name: Run my custom action
         uses: ./my-js-action
         with:
