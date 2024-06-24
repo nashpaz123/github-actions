@@ -46,7 +46,6 @@ In this example:
 #### Exercise 3: Using Secrets and Environment Variables
 Now, let’s walk through a hands-on exercise to create a workflow that uses secrets and environment variables.
 
-```markdown
 # Exercise 3: Using Secrets and Environment Variables
 
 In this exercise, you will create a workflow that uses a secret and an environment variable.
@@ -102,7 +101,7 @@ In this exercise, you will create a workflow that uses a secret and an environme
     - Go to your GitHub repository and click on the "Actions" tab.
     - You should see the "Use Secrets and Env Variables" workflow running. Click on it to see the details.
     - Verify that the workflow ran successfully and printed the secret and the environment variable.
-```
+
 
 ### Matrix Builds
 
@@ -151,7 +150,6 @@ In this example:
 #### Exercise 4: Matrix Builds
 Let's walk through a hands-on exercise to create a workflow with matrix builds.
 
-```markdown
 # Exercise 4: Matrix Builds
 
 In this exercise, you will create a workflow that uses matrix builds to run tests on multiple environments.
