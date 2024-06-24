@@ -1,0 +1,20 @@
+name: User Input Example
+
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Person to greet'
+        required: true
+        default: 'World'
+      time_of_day:
+        description: 'Time of day to greet'
+        required: false
+        default: 'day'
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print greeting
+        run: echo "Good ${{ github.event.inputs.time_of_day }}, ${{ github.event.inputs.name }}!"
