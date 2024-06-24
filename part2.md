@@ -1,4 +1,4 @@
-```markdown
+
 # GitHub Actions 
 
 ## Part 2: Setting Up and Running Your First Workflow (45 minutes)
@@ -124,7 +124,7 @@ In this exercise, you will create a basic GitHub Actions workflow that prints "H
     - Go to your GitHub repository and click on the "Actions" tab.
     - You should see the "Hello World" workflow running. Click on it to see the details.
     - Verify that the workflow ran successfully and printed "Hello, World!".
-```
+
 
 ### Running Tests on Push
 Now that you’ve created a simple "Hello, World!" workflow, let's create a more practical workflow that runs tests every time code is pushed to the repository. This ensures that your code changes do not introduce any new bugs.
