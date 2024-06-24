@@ -1,36 +1,25 @@
-name: Complex Workflow
+name: Complex Workflow para
 
 on: [push]
 
 jobs:
-  build:
+  just-checkout:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Build project
-      run: npm run build
-
-  test:
-    needs: build
+  para1:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+    - name: syncing some server
+      uses: sleep 30
 
-    - name: Run tests
-      run: npm test
-
-  deploy:
-    needs: test
+  para2:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-
-    - name: Deploy application
-      run: echo "Deploying application..."
+    - name: syncing another server
+      run: sleep 30
