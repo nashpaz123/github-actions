@@ -214,7 +214,7 @@ In this exercise, you will create a custom Docker-based action and use it in a w
            uses: actions/checkout@v4
 
          - name: Run custom action
-           uses: ./.github/actions/my-docker-action
+           uses: ./my-docker-action
            with:
              name: 'World'
      ```
