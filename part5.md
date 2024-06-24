@@ -154,7 +154,7 @@ jobs:
 
     steps:
     - name: syncing some server
-      uses: sleep 30
+      uses: sleep 30 #run? or uses?
 
   para2:
     runs-on: ubuntu-latest
