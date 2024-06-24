@@ -1,0 +1,9 @@
+     name: 'My JS Action'
+     description: 'A custom JavaScript action'
+     inputs:
+       name:
+         description: 'The name to greet'
+         required: true
+     runs:
+       using: 'node12'
+       main: 'index.js'
