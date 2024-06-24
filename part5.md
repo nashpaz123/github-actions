@@ -91,7 +91,7 @@ In this example:
 For complex projects, you might need to coordinate multiple jobs and workflows. GitHub Actions provides features like dependencies, conditional execution, and reusable workflows to help manage these scenarios.
 
 ```yaml
-name: Complex Workflow
+name: Complex Workflow sequence
 
 on: [push]
 
@@ -114,7 +114,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Run tests
+    - name: Run tests if build completed
       run: npm test
 
   deploy:
@@ -125,13 +125,45 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Deploy application
+    - name: Deploy application if tested
       run: echo "Deploying application..."
 ```
 
 In this example:
 - The `test` job depends on the `build` job, and the `deploy` job depends on the `test` job.
 - This ensures that tests are run only if the build is successful, and deployment happens only if tests pass.
+
+###Para Para workflows
+If the jobs are independent, they can run in parallel:
+
+```yaml
+name: Complex Workflow sequence
+
+on: [push]
+
+jobs:
+  just-checkout:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+  para1:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: syncing some server
+      uses: sleep 30
+
+  para2:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: syncing another server
+      run: sleep 30
+```
+
 
 ### Best Practices for GitHub Actions
 
