@@ -183,9 +183,8 @@ In this exercise, you will create a custom Docker-based action and use it in a w
    - Inside the `my-docker-action` directory, create a file named `entrypoint.sh` with the following content:
 
      ```bash
-     #!/bin/sh -l
-
-     echo "Hello, $1!"
+#!/bin/sh -l
+echo "Hello, $1!"
      ```
 
 5. **Commit and push your changes**:
