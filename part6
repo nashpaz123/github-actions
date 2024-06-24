@@ -1,0 +1,26 @@
+To enable runner diagnostic logging, set the following secret or variable in the repository that contains the workflow: ACTIONS_RUNNER_DEBUG to true. If both the secret and variable are set, the value of the secret takes precedence over the variable.
+
+To enable step debug logging, set the following secret or variable in the repository that contains the workflow: ACTIONS_STEP_DEBUG to true. If both the secret and variable are set, the value of the secret takes precedence over the variable.
+
+Use tmate to ssh into the runner instance:
+
+    ```yaml
+    name: Use Secrets and Env Variables
+
+    on: [push]
+
+    jobs:
+      use_secrets_job:
+        runs-on: ubuntu-latest
+        environment: env1
+
+        steps:
+        - name: Checkout code
+          uses: actions/checkout@v4
+
+        - name: Print secret
+          run: echo ${{ secrets.MY_SECRET }} > 1.txt
+
+        - name: Run tmate
+          uses: mxschmitt/action-tmate@v2
+      ```
