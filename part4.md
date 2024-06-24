@@ -241,6 +241,7 @@ git push origin v1.0.0
 ```
 
 3. **Publish the action**:
+   - see: https://docs.github.com/en/actions/creating-actions/publishing-actions-in-github-marketplace
    - Navigate to the "Actions" tab in your repository.
    - Click on the "New Release" button.
    - Follow the prompts to publish your action to the GitHub Marketplace.
