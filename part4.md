@@ -1,5 +1,3 @@
-
-```markdown
 # GitHub Actions 
 
 ## Part 4: Custom Actions and Marketplace (30 minutes)
@@ -66,7 +64,7 @@ JavaScript actions are defined by a JavaScript file and an action metadata file.
 5. In your repository, create a new workflow file `custom-action.yml` in the .github/workflows directory.
 
     ```yaml
-nname: Custom js action
+name: Custom js action
 
 on: [push]
 
@@ -87,7 +85,7 @@ jobs:
           name: 'myname'
 ```
 
-
+```
 #### Writing Docker-based Actions
 
 Docker-based actions use a Docker container to run the action's logic, which can include any tools or dependencies installed in the container.
