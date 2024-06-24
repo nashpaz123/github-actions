@@ -63,7 +63,7 @@ JavaScript actions are defined by a JavaScript file and an action metadata file.
 
 5. In your repository, create a new workflow file `custom-action.yml` in the .github/workflows directory.
 
-    ```yaml
+```yaml
 name: Custom js action
 
 on: [push]
@@ -85,7 +85,6 @@ jobs:
           name: 'myname'
 ```
 
-```
 #### Writing Docker-based Actions
 
 Docker-based actions use a Docker container to run the action's logic, which can include any tools or dependencies installed in the container.
@@ -125,18 +124,16 @@ Docker-based actions use a Docker container to run the action's logic, which can
 3. **Create the entrypoint script**:
    - Inside the `my-docker-action` directory, create a file named `entrypoint.sh` with the following content:
 
-     ```bash
-     #!/bin/sh -l
-
-     echo "Hello, $1!"
-     ```
+```bash
+#!/bin/sh -l
+echo "Hello, $1!"
+```
 
 4. **Publish your action**:
    - Commit and push your changes to your repository. You can now use your custom action in workflows.
 
 #### Exercise 5: Creating a Custom Action
 
-```markdown
 # Exercise 5: Creating a Custom Action
 
 In this exercise, you will create a custom Docker-based action and use it in a workflow.
@@ -224,7 +221,6 @@ echo "Hello, $1!"
    - Go to your GitHub repository and click on the "Actions" tab.
    - You should see the "Custom Action" workflow running. Click on it to see the details.
    - Verify that the workflow ran successfully and printed "Hello, World!".
-```
 
 ### Publishing Actions to the GitHub Marketplace
 
@@ -236,10 +232,10 @@ To share your custom actions with the GitHub community, you can publish them to 
 2. **Tag a release**:
    - Create a new tag in your repository for the release. This can be done via the GitHub web interface or using Git commands.
 
-     ```bash
-     git tag -a v1.0.0 -m "Initial release"
-     git push origin v1.0.0
-     ```
+```bash
+git tag -a v1.0.0 -m "Initial release"
+git push origin v1.0.0
+```
 
 3. **Publish the action**:
    - Navigate to the "Actions" tab in your repository.
