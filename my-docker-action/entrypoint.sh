@@ -1,3 +1,2 @@
-     #!/bin/bash
-
-     echo "Hello, $1!"
+#!/bin/sh -l
+echo "Hello, $1!"
