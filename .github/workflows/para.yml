@@ -3,7 +3,7 @@ name: Complex Workflow para
 on: [push]
 
 jobs:
-  just-checkout:
+  justcheckout:
     runs-on: ubuntu-latest
 
     steps:
