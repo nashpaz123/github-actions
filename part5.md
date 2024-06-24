@@ -137,7 +137,7 @@ In this example:
 If the jobs are independent, they can run in parallel:
 
 ```yaml
-name: Complex Workflow sequence
+name: Complex Workflow para
 
 on: [push]
 
