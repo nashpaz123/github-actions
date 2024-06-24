@@ -125,8 +125,11 @@ Docker-based actions use a Docker container to run the action's logic, which can
    - Inside the `my-docker-action` directory, create a file named `entrypoint.sh` with the following content:
 
 ```bash
+
 #!/bin/sh -l
+
 echo "Hello, $1!"
+
 ```
 
 4. **Publish your action**:
