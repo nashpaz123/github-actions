@@ -5,6 +5,9 @@ on:
     branches:
       - main  # Set the branch you want to deploy from
 
+permissions:
+  contents: write  # Explicitly set permissions for the GITHUB_TOKEN
+  
 jobs:
   build:
     runs-on: ubuntu-latest
