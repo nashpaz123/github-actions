@@ -49,3 +49,14 @@ jobs:
       - name: Print greeting
         run: echo "Good ${{ github.event.inputs.time_of_day }}, ${{ github.event.inputs.name }}!"
 ```
+
+5. GH pages
+
+```
+a. Create a index.html in the root folder of your repo, 
+b. go to settings -> pages , 
+c. change source to github actions. 
+d. choose static
+Go to the gh pages url ( will be displayed in the job view, https://<your user name>.github.io/github-actions/
+e. make changes to the index.html
+```
